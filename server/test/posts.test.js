@@ -56,6 +56,9 @@ test('Should not save a post', async function () {
     await postsService.deletePost(post.id)
 })
 
+
+
+
 test('Should update a post', async function () {
     //criando post
     const post = await postsService.savePost({ title: generate(), content: generate() })
@@ -84,6 +87,9 @@ test('Should not update a post', async function () {
     
     expect(response.status).toBe(404)
 })
+
+
+
 
 test('Should delete a post', async function () {
     const post = await postsService.savePost({ title: generate(), content: generate() })
